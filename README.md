@@ -52,7 +52,7 @@ La card donde se muestran los datos ingresados tiene el siguiente formato:
     ```
     - Luego, inicia el servidor de desarrollo:
     ```bash
-    npm start
+    npm run dev
     ```
 
 2. **Estructura del proyecto**:
