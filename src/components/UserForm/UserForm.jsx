@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './UserForm.scss';
+import errorImage from '../../assets/icon.png'
 
 const UserForm = () => {
     const initialState = {
@@ -60,10 +61,7 @@ const UserForm = () => {
             return;
         }
 
-        // Guardamos los datos enviados
         setSubmittedData(formData);
-
-        // Resetear el formulario
         setFormData(initialState);
 
         // Simulación de API
@@ -81,25 +79,37 @@ const UserForm = () => {
 
                 <div className={`inputContainer ${formErrors.name ? "inputError" : ""}`} id="name">
                     <label htmlFor="name">Full name</label>
-                    <input type="text" name="name" className="textInputs" value={name} onChange={onChangeHandler} />
+                    <div className='containerInputImg'>
+                        <input type="text" name="name" className="textInputs" value={name} onChange={onChangeHandler} onBlur={onBlurHandler} />
+                        {formErrors.name && <img src={errorImage} alt="error" className="errorIcon" />}
+                    </div>
                     {formErrors.name && <span className="errorMessage">{formErrors.name}</span>}
                 </div>
 
                 <div className={`inputContainer ${formErrors.email ? "inputError" : ""}`} id="email">
                     <label htmlFor="email">Email address</label>
-                    <input type="text" name="email" className="textInputs" value={email} onChange={onChangeHandler} onBlur={onBlurHandler} />
+                    <div className='containerInputImg'>
+                        <input type="text" name="email" className="textInputs" value={email} onChange={onChangeHandler} onBlur={onBlurHandler} />
+                        {formErrors.email && <img src={errorImage} alt="error" className="errorIcon" />}
+                    </div>
                     {formErrors.email && <span className="errorMessage">{formErrors.email}</span>}
                 </div>
 
                 <div className={`inputContainer ${formErrors.phone ? "inputError" : ""}`} id="phone">
                     <label htmlFor="phone">Phone number</label>
-                    <input type="number" name="phone" className="textInputs" value={phone} onChange={onChangeHandler} onBlur={onBlurHandler} />
+                    <div className='containerInputImg'>
+                        <input type="text" name="phone" className="textInputs" value={phone} onChange={onChangeHandler} onBlur={onBlurHandler} />
+                        {formErrors.phone && <img src={errorImage} alt="error" className="errorIcon" />}
+                    </div>
                     {formErrors.phone && <span className="errorMessage">{formErrors.phone}</span>}
                 </div>
 
                 <div className={`inputContainer ${formErrors.message ? "inputError" : ""}`} id="message">
                     <label htmlFor="message">Message</label>
-                    <input type="text" name="message" className="textInputs" value={message} onChange={onChangeHandler} />
+                    <div className='containerInputImg'>
+                        <input type="text" name="message" className="textInputs" value={message} onChange={onChangeHandler} onBlur={onBlurHandler} />
+                        {formErrors.message && <img src={errorImage} alt="error" className="errorIcon" />}
+                    </div>
                     {formErrors.message && <span className="errorMessage">{formErrors.message}</span>}
                 </div>
 
