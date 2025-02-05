@@ -110,7 +110,6 @@ h1{
     font-weight: 600;
 }
 
-/* Contenedor para el input y el ícono de error */
 .containerInputImg{
     display: flex;
     justify-content: space-between;
@@ -118,14 +117,12 @@ h1{
     gap: 10px;
 }
 
-/* Ícono de error, visible solo si hay un error */
 .errorIcon{
     display: none;
     width: 15px;
     height: 15px;
 }
 
-/* Mostrar el ícono solo si el campo tiene error */
 .inputError .errorIcon {
     display: inline-block;
 }

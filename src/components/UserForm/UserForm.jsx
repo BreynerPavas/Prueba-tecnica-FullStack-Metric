@@ -11,8 +11,8 @@ const UserForm = () => {
         message: ""
     };
     const [formData, setFormData] = useState(initialState);
-    const [formErrors, setFormErrors] = useState({}); // Estado para los errores
-    const [submittedData, setSubmittedData] = useState(null); // Estado para los datos enviados
+    const [formErrors, setFormErrors] = useState({});
+    const [submittedData, setSubmittedData] = useState(null); 
 
     const { name, email, phone, message } = formData;
 
