@@ -1,0 +1,118 @@
+
+form{
+    
+        width: 80%; 
+        padding-right: var(--bs-gutter-x, 12px); 
+        padding-left: var(--bs-gutter-x, 12px);
+        margin-right: auto; 
+        margin-left: auto;
+        max-width: 80%; 
+        display: flex;
+        flex-direction: column;
+      
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin: 12px 0px;
+
+}
+h1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Inter;
+font-size: 46px;
+font-weight: 500;
+line-height: 55.67px;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.textInputs{
+    margin-top: 2px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #949494;
+}
+.textInputs:focus{
+    outline: none;
+}
+.errorMessage{
+    margin-top: 5 px;
+    visibility: hidden;
+}
+.inputError{
+    label{
+        color: #EE0004;
+    }
+    input{
+        border: 2px solid #EE0004;
+    }
+    span{
+        visibility: visible;
+        color: #EE0004;
+    }
+}
+.submitB{
+    color: white;
+    background-color: #1A1A1A;
+    align-self: center;
+    width: 100%;
+    outline: none;
+    padding: 15px 0px;
+    border-radius: 4px;
+    
+}
+.submitB:hover{
+    background-color: #595959;
+}
+/* Card para mostrar los datos */
+.cardUser {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.cardUser h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.cardContent {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.cardContent p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cardContent p strong {
+    font-weight: 600;
+}
+@media (min-width:768px){
+    .inputContainer{
+        width: 48%;
+    }
+    form {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+} 
